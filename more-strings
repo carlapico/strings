@@ -1,0 +1,63 @@
+/* String: indexOf() with from index
+The indexOf method allows you to specify the position from which the search should start. This is done with a second parameter.
+let n1 = 'White Rabbit'.indexOf('it', 1);
+let n2 = 'White Rabbit'.indexOf('it', 3);
+The first 'it' in 'White Rabbit' has the index 2. Starting our search at position 1 it will be found. n1 is 2. The second 'it' in 'White Rabbit' has the index 10. Starting our search at position 3 it will be found. n2 is 10.
+Exercise
+Write a function secondIndexOf, taking two strings and determining the second occurrence of the second string in the first string. If the search string does not occur twice, -1 should be returned.
+
+Example: secondIndexOf('White Rabbit', 'it') should return 10.
+console.log(findIndex([2,3,4,'str'], 'str'))
+
+String: indexOf() with from index
+The indexOf method allows you to specify the position from which the search should start. This is done with a second parameter.
+let n1 = 'White Rabbit'.indexOf('it', 1);
+let n2 = 'White Rabbit'.indexOf('it', 3);
+The first 'it' in 'White Rabbit' has the index 2. Starting our search at position 1 it will be found. n1 is 2. The second 'it' in 'White Rabbit' has the index 10. Starting our search at position 3 it will be found. n2 is 10.
+Exercise
+Write a function secondIndexOf, taking two strings and determining the second occurrence of the second string in the first string. If the search string does not occur twice, -1 should be returned.
+
+Example: secondIndexOf('White Rabbit', 'it') should return 10.
+*/
+
+function secondIndexOf(s1, s2) {
+    let firstIndex = s1.indexOf(s2);
+    return s1.indexOf(s2, firstIndex + 1);
+  }
+
+  console.log(secondIndexOf('Happy Carla ',"Pico"))
+
+  
+//String: substr()
+// The substr method extracts a substring from a string:
+// let see = 'see and stop'.substr(0, 3);
+// let and = 'see and stop'.substr(4, 3);
+// let stop = 'see and stop'.substr(8);
+// The first parameter specifies the position at which to start extracting. The second parameter specifies the number of characters to extract. If the second parameter is not set, all the characters from start position to the end of the string are extracted.
+// Exercise
+// Write a function firstWord, taking a string and returning the first word in that string. The first word are all characters up to the first space.
+
+// Example: firstWord('see and stop') should return 'see'.
+// function firstWord(s) {
+//     let firstBlank = s.indexOf(' ');
+//     return s.substr(0, firstBlank);
+//   }
+
+//   String: replace()
+//   The replace method replaces a substring with another:
+//   let str = 'JavaScript';
+//   let newstr = str.replace('Java', 'ECMA');
+//   'Java' is replaced with 'ECMA'. Thus newstr has the value 'ECMAScript'. The original string remains unchanged. Only the first occurrence is replaced:
+//   let newstr = 'Dada'.replace('a', 'i');
+//   newstr has the value 'Dida' and not 'Didi'.
+//   Exercise
+//   Write a function normalize, that replaces '-' with '/' in a date string.
+  
+//   Example: normalize('20-05-2017') should return '20/05/2017'.
+function normalize (dateStr) {
+    let newDateStr = dateStr.replace('-', '/') 
+    let newestDateStr= newDateStr.replace('-', '/')
+    return newestDateStr
+  }
+
+console.log(normalize('20-05-2017'))
